@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Gangotri International School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        header {
+            background-color: #05a29b;
+            color: white;
+            padding-top: 30px; /* Adjust padding to accommodate fixed navbar */
+            text-align: center;
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #05a29b;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: top 0.3s;
+        }
+        .navbar .logo img {
+            width: 150px; /* Original width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .navbar .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar .menu li {
+            margin-left: 20px;
+        }
+        .navbar .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        .navbar .menu li a:hover {
+            color: #d4f4f3;
+        }
+        .container {
+            padding: 20px;
+            padding-top: 60px; /* Adjust padding to accommodate fixed navbar */
+            max-width: 800px; /* Limit content width */
+            margin: 0 auto;
+        }
+        .blog-post {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .blog-post h1 {
+            font-size: 2em;
+            color: #5b5b5b;
+            margin-top: 0;
+        }
+        .blog-post-content {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #5b5b5b;
+        }
+        /* Hide scrollbar for all browsers */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        html {
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For IE and Edge */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Gangotri International School Logo">
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recent-news.html">Recent News</a></li>
+            <!-- Add more menu items here -->
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <h1>Title of Blog Post</h1>
+        <div class="blog-post-content">
+            <p>This is the content of your blog post. Replace this text with your actual content.</p>
+            <p>You can add more paragraphs, images, and other elements here.</p>
+        </div>
+    </article>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('visible');
+        } else {
+            navbar.classList.remove('visible');
+        }
+    });
+</script>
+
+</body>
+</html>
